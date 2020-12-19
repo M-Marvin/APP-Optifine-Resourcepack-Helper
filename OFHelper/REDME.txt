@@ -1,0 +1,7 @@
+#################################################################################################
+#	Anleitung										#
+#################################################################################################
+#1. shape.png Textur durch beliebiges Randmuster ersetzen.					#
+#2. bsi zu 9 Block-Texturen auf OFHelper.cmd ziehen						#
+#3. Fenster schließen und Textuern aus dem Ordner "Output" kopieren (Und Ordner leeren).	#
+#################################################################################################
