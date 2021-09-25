@@ -1,0 +1,2 @@
+java -jar %~dp0OFHelper.jar -addTexture %1 -addTexture %2 -addTexture %3 -addTexture %4 -addTexture %5 -addTexture %6 -addTexture %7 -addTexture %8 -addTexture %9 -setShapeMode %~dp0shape.png -setTempFolder %~dp0temp
+pause

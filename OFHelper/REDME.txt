@@ -1,7 +1,21 @@
 #################################################################################################
-#	Anleitung										#
+#	Anleitung Texturen generieren								#
 #################################################################################################
 #1. shape.png Textur durch beliebiges Randmuster ersetzen.					#
-#2. bsi zu 9 Block-Texturen auf OFHelper.cmd ziehen						#
-#3. Fenster schließen und Textuern aus dem Ordner "Output" kopieren (Und Ordner leeren).	#
+#2. bis zu 9 Block-Texturen auf OFHelper-ShapeTexture.cmd ziehen				#
+#3. Fenster schließen und Textuern aus dem Ordner "Output" kopieren.				#
 #################################################################################################
+#	Anleiung Übergangsdateien erzeugen							#
+#################################################################################################
+#1. Blöcke in der liste.txt auflisten								#
+#2. OFHelper-ListFile.cmd ausführen								#
+#3. Fenster schließen und Dateien aus dem Ordner "Output" kopieren.				#
+#################################################################################################
+
+ERKLÄRUNG SYMBOLIK LIST.TXT:
+
+#  Tint-Eigenschaft
+*  connectTiles statt connectBlock
+-  keine Datei anlegen
+[] Blöcke in der Klammer werden nicht überhangen
+() Blöcke in der Kalmmer werden zusätzlich überhangen
