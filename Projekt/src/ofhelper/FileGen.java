@@ -72,14 +72,15 @@ public class FileGen {
 		
 		String blockName = isValidFlag(flag) ? blockEntry.substring(1) : blockEntry;
 		
-		if (blockEntry.contains("\\[")) {
+		List<String> ignoredBlocks = new ArrayList<String>();
+		if (blockEntry.contains("[")) {
 			String removeBlocks = blockEntry.split("\\[")[1].split("\\]")[0];
 			for (String remove : removeBlocks.split(",")) {
-				blocksBelow.remove(remove);
+				ignoredBlocks.add(remove);
 			}
 			blockName = blockName.split("\\[")[0];
 		}
-		if (blockEntry.contains("\\(")) {
+		if (blockEntry.contains("(")) {
 			String addBlocks = blockEntry.split("\\(")[1].split("\\)")[0];
 			for (String add : addBlocks.split(",")) {
 				blocksBelow.add(add);
@@ -95,6 +96,7 @@ public class FileGen {
 			char flag1 = block.charAt(0);
 			String lineEntry = isValidFlag(flag1) ? block.substring(1) : block;
 			lineEntry = lineEntry.split("\\[")[0].split("\\(")[0];
+			if (ignoredBlocks.contains(lineEntry)) continue;
 			fileBuilder.append(lineEntry + (i != blocksBelow.size() - 1 ? " " : ""));
 		}
 		
